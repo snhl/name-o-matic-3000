@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Generate a random name for a namespace, class, function or variabel.
+# Generate a random name for a namespace, class, function or variable.
 # Complies with the JSF coding standard.
 #
 # Note:
@@ -9,14 +9,13 @@
 
 from argparse import ArgumentParser
 from random import randint
-from os.path import basename
-from sys import argv, exit
+from sys import exit
 
 name_types = [
     "namespace",
     "class",
     "function",
-    "variabel",
+    "variable",
 ]
 
 nouns = [
@@ -36,7 +35,7 @@ used_names = []
 styles = {
       "namespace": ("{0}{1}",  str.lower,      str.lower)
     , "class":     ("{0}_{1}", str.capitalize, str.lower)
-    , "variabel":  ("{0}_{1}", str.lower,      str.lower)
+    , "variable":  ("{0}_{1}", str.lower,      str.lower)
     , "function":  ("{0}_{1}", str.lower,      str.lower)
 }
 
