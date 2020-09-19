@@ -99,4 +99,7 @@ if __name__ == "__main__":
         if args.u is not None:
             with open(args.u, 'a') as used_names_file:
                 used_names_file.write("{0},{1}\n".format(name_type, name))
-        print(name)
+
+        # No newline at the line end is intentional as the newline would
+        # otherwise show when calling this script from Emacs.
+        print(name, end = '')
